@@ -1,1 +1,3 @@
-# Employee Payroll Tracker Starter Code
+![Screenshot of project](assets/images/Screenshot%202024-03-11%20at%209.56.35 PM.png)
+[![HTML 5 Badge](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=fff&style=for-the-badge)]() [![CSS 3 Badge](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff&style=for-the-badge)]() [![Javascript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)]() [![GitHub profile](https://img.shields.io/badge/GitHub-181717?logo=GitHub&logoColor=fff&style=for-the-badge)](https://github.com/domdecap) 
+# 💻 [Payroll Tracker](https://domdecap.github.io/payroll-tracker/)
