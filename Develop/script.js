@@ -19,7 +19,7 @@ const collectEmployees = function() {
     let salary = prompt("Enter employee's salary:  $");
     if (isNaN(salary)) {
       alert('Invalid salary. Please enter a valid number');
-      return;
+      continue;
     };
   // I'm not sure how to make this go back to salary prompt if isNan true
     let employee = {
@@ -41,19 +41,28 @@ const collectEmployees = function() {
 
 
   
-
+return employeesArray;
 }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+  console.log(employeesArray);
+  const totalSalary = employeesArray.reduce((sum, employee) => sum + parseInt(employee.salary), 0);
+const averageSalary = totalSalary / employeesArray.length;
+
+console.log(`Average Salary: $${averageSalary.toFixed(2)}`);
   
   
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+  const randomIndex = Math.floor(Math.random() * employeesArray.length);
+const randomEmployee = employeesArray[randomIndex];
+
+console.log('Random Employee:');
+console.log(randomEmployee);
+
 }
 
 /*
