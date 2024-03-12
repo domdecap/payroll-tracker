@@ -1,19 +1,68 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
+const employeesArray = []
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
+  // User is prompted for employee first name
+  // User is prompted for employee last name
+  // User is prompted for employee salary
+  // Check to make sure salary input is a number
+  // User is prompted If they would like to continue
+  // Employee name and salary are stored in an element
+  // Element is pushed to array
+  
+  while(true) {
+    let firstName = prompt("Enter employee's name:");
+    let lastName = prompt("Enter employee's last name:");
+    let salary = prompt("Enter employee's salary:  $");
+    if (isNaN(salary)) {
+      alert('Invalid salary. Please enter a valid number');
+      continue;
+    };
+  // I'm not sure how to make this go back to salary prompt if isNan true
+    let employee = {
+      firstName: firstName,
+      lastName: lastName,
+      salary: salary,
+  
+    };
+  
+    employeesArray.push(employee);
+
+    let continueAdding = confirm("Would you like to add another employee?");
+
+    if (!continueAdding) {
+      break;
+    }
+  }
+
+
+
+  
+return employeesArray;
 }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+  console.log(employeesArray);
+  const totalSalary = employeesArray.reduce((sum, employee) => sum + parseInt(employee.salary), 0);
+const averageSalary = totalSalary / employeesArray.length;
+
+console.log(`Average Salary: $${averageSalary.toFixed(2)}`);
+  
+  
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+  const randomIndex = Math.floor(Math.random() * employeesArray.length);
+const randomEmployee = employeesArray[randomIndex];
+
+console.log('Random Employee:');
+console.log(randomEmployee);
+
 }
 
 /*
